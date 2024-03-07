@@ -1,7 +1,9 @@
 fun main() {
 }
 
-open class Person
+interface Drawable {
+    fun draw()
+}
 
 abstract class Animal {
     open fun move() {
@@ -9,11 +11,13 @@ abstract class Animal {
     }
 }
 
-class SuperMan : Person()
-
-class Dog : Animal() {
+class Dog : Animal(), Drawable {
     override fun move() {
         println("껑충")
+    }
+
+    override fun draw() {
+        TODO("Not yet implemented")
     }
 }
 
