@@ -1,7 +1,11 @@
-const val num = 20
-
 fun main() {
-    var i : Int = 10
-    var name : String = "준석"
-    var point: Double = 3.3
+    var i = 10
+    var l = 20L
+
+    var name = "10"
+    name = i.toString()
+    i = name.toInt()
+
+    l = i.toLong()
+    i = l.toInt()
 }
