@@ -1,4 +1,12 @@
 fun main() {
+    val dog: Animal = Dog()
+    val cat = Cat()
+
+    if (dog is Dog) {
+        dog.draw()
+        dog.move()
+        println("멍멍이")
+    }
 }
 
 interface Drawable {
@@ -17,7 +25,7 @@ class Dog : Animal(), Drawable {
     }
 
     override fun draw() {
-        TODO("Not yet implemented")
+        println("draw")
     }
 }
 
