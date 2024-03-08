@@ -1,8 +1,11 @@
 fun main() {
-    val box = Box(10)
-    val box2 = Box("dfdfd")
-
-    println(box.value)
+    myFunc(10) {
+        println("함수 호출")
+    }
 }
 
-class Box<T>(val value: T)
+fun myFunc(a: Int, callBack : () -> Unit = {}) {
+    println("함수 시작!!!")
+    callBack()
+    println("함수 끝!!!")
+}
